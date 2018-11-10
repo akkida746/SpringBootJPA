@@ -15,6 +15,10 @@ public class PersonDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
+    public long getTotalConnectionsCount(){
+        return getSession().getSessionFactory().getStatistics().getConnectCount();
+    }
+
     private Session getSession() {
         return sessionFactory.getCurrentSession();
     }

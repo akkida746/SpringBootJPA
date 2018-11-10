@@ -29,4 +29,5 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web')
 	runtimeOnly('org.springframework.boot:spring-boot-devtools')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	compile group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.3.7.Final'
 }
