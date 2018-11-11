@@ -110,7 +110,7 @@ public class HibernateConfiguration {
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", DIALECT);
         hibernateProperties.put("hibernate.show_sql", SHOW_SQL);
-        hibernateProperties.put("hibernate.hbm2ddl.auto", HBM2DDL_AUTO);
+        //hibernateProperties.put("hibernate.hbm2ddl.auto", HBM2DDL_AUTO);
 
         hibernateProperties.put("hibernate.c3p0.min_size", min_size);
         hibernateProperties.put("hibernate.c3p0.max_size", max_size);

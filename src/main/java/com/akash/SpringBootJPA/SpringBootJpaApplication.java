@@ -18,10 +18,14 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Person person = new Person();
-		person.setName("xxdeepa");
-		person.setCity("Noida");
+		person.setName("person");
+		person.setCity("London");
 		personDao.savePerson(person);
 
-		System.out.println(personDao.getTotalConnectionsCount());
+		Employee emp = new Employee();
+		emp.setName("employee");
+		emp.setCity("Noida");
+		emp.setDesignation("Architect");
+		personDao.savePerson(emp);
 	}
 }

@@ -3,6 +3,12 @@ package com.akash.SpringBootJPA;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "person")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // Simply change the InheritanceType value and run main class.
+@DiscriminatorColumn(
+        name="TYP",
+        discriminatorType=DiscriminatorType.STRING
+)
 public class Person {
 
     @Column(name = "id")
