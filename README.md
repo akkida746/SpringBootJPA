@@ -6,5 +6,5 @@ I have also implemented Hibernate inheritance strategies:
  2. Table per concrete class inheritance.
  3. Joined tables inheritance
  
-For inheritance strategies i have referred below website:
+For inheritance strategies i have referred this website:
 https://www.dineshonjava.com/hibernate/implementing-inheritance-in-hibernate/
