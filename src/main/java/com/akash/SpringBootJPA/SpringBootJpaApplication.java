@@ -14,9 +14,13 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 
 	@Autowired
 	private PersonDAO personDao;
+	@Autowired
+	private PersonHibernateDAO personHibernateDAO;
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		// Saving objects using Spring @Transactional.
 		Person person = new Person();
 		person.setName("person");
 		person.setCity("London");
@@ -27,5 +31,12 @@ public class SpringBootJpaApplication implements CommandLineRunner {
 		emp.setCity("Noida");
 		emp.setDesignation("Architect");
 		personDao.savePerson(emp);
+
+		// Saving objects using Hibernate transaction.
+		Person person1 = new Person();
+		person1.setName("person1");
+		person1.setCity("Paris");
+		personHibernateDAO.savePerson(person1);
+
 	}
 }
